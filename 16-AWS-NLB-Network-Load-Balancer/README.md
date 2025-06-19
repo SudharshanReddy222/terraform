@@ -184,7 +184,7 @@ output "route53_records" {
 # DNS Registration 
 resource "aws_route53_record" "apps_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id 
-  name    = "nlb1.devopsincloud.com"
+  name    = "nlb1.jayavardhanreddy616.xyz"
   type    = "A"
   alias {
     name                   = module.nlb.lb_dns_name
@@ -250,14 +250,14 @@ terraform apply -auto-approve
 6. Access and Test
 ```t
 # Access and Test with Port 80 - TCP Listener
-http://nlb.devopsincloud.com
-http://nlb.devopsincloud.com/app1/index.html
-http://nlb.devopsincloud.com/app1/metadata.html
+http://nlb.jayavardhanreddy616.xyz
+http://nlb.jayavardhanreddy616.xyz/app1/index.html
+http://nlb.jayavardhanreddy616.xyz/app1/metadata.html
 
 # Access and Test with Port 443 - TLS Listener
-https://nlb.devopsincloud.com
-https://nlb.devopsincloud.com/app1/index.html
-https://nlb.devopsincloud.com/app1/metadata.html
+https://nlb.jayavardhanreddy616.xyz
+https://nlb.jayavardhanreddy616.xyz/app1/index.html
+https://nlb.jayavardhanreddy616.xyz/app1/metadata.html
 ```
 
 ## Step-11: Clean-Up

@@ -122,7 +122,7 @@ module "alb" {
 
           conditions = [{
             host_header = {
-              values = ["azure-aks11.devopsincloud.com"]
+              values = ["azure-aks11.jayavardhanreddy616.xyz"]
             }
           }]
         }# Rule-4: Host Header Redirect        

@@ -218,12 +218,12 @@ resource "aws_route53_record" "apps_dns" {
 #### Step-07-04-03: dev.tfvars
 ```t
 # DNS Name
-dns_name = "devdemo1.devopsincloud.com"
+dns_name = "devdemo1.jayavardhanreddy616.xyz"
 ```
 #### Step-07-04-04: stag.tfvars
 ```t
 # DNS Name
-dns_name = "stagedemo1.devopsincloud.com"
+dns_name = "stagedemo1.jayavardhanreddy616.xyz"
 ```
 
 ### Step-07-05: c11-acm-certificatemanager.tf
@@ -231,12 +231,12 @@ dns_name = "stagedemo1.devopsincloud.com"
 ```t
 # Before
   subject_alternative_names = [
-    "*.devopsincloud.com"
+    "*.jayavardhanreddy616.xyz"
   ]
 
 # After
   subject_alternative_names = [
-    #"*.devopsincloud.com"
+    #"*.jayavardhanreddy616.xyz"
     var.dns_name  
   ]
 ```
@@ -560,9 +560,9 @@ arn:aws:iam::180789647333:role/service-role/codebuild-codebuild-tf-iacdevops-aws
 7. Access and Test
 ```t
 # Access and Test
-http://devdemo1.devopsincloud.com
-http://devdemo1.devopsincloud.com/app1/index.html
-http://devdemo1.devopsincloud.com/app1/metadata.html
+http://devdemo1.jayavardhanreddy616.xyz
+http://devdemo1.jayavardhanreddy616.xyz/app1/index.html
+http://devdemo1.jayavardhanreddy616.xyz/app1/metadata.html
 ```
 
 ## Step-19: Add Approval Stage before deploying to staging environment
@@ -624,9 +624,9 @@ http://devdemo1.devopsincloud.com/app1/metadata.html
 7. Access and Test
 ```t
 # Access and Test
-http://stagedemo1.devopsincloud.com
-http://stagedemo1.devopsincloud.com/app1/index.html
-http://stagedemo1.devopsincloud.com/app1/metadata.html
+http://stagedemo1.jayavardhanreddy616.xyz
+http://stagedemo1.jayavardhanreddy616.xyz/app1/index.html
+http://stagedemo1.jayavardhanreddy616.xyz/app1/metadata.html
 ```
  
 ## Step-24: Make a change and test the entire pipeline

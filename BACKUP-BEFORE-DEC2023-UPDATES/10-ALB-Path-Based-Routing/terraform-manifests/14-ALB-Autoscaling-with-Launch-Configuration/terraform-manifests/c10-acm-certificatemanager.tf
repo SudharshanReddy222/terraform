@@ -1,6 +1,6 @@
 # Get DNS information from AWS Route53
 data "aws_route53_zone" "mydomain" {
-  name = "devopsincloud.com"
+  name = "jayavardhanreddy616.xyz"
 }
 
 # ACM Module - To create and Verify SSL Certificates
@@ -11,13 +11,13 @@ module "acm" {
   domain_name = trimsuffix(data.aws_route53_zone.mydomain.name, ".") 
   zone_id     = data.aws_route53_zone.mydomain.id
   subject_alternative_names = [
-    "apps.devopsincloud.com",
-    "app1.devopsincloud.com",
-    "app2.devopsincloud.com",
-    "default.devopsincloud.com",
-    "custom-header.devopsincloud.com",
-    "redirects1.devopsincloud.com",
-    "lb-to-db1.devopsincloud.com",
-    "asg-lc2.devopsincloud.com",
+    "apps.jayavardhanreddy616.xyz",
+    "app1.jayavardhanreddy616.xyz",
+    "app2.jayavardhanreddy616.xyz",
+    "default.jayavardhanreddy616.xyz",
+    "custom-header.jayavardhanreddy616.xyz",
+    "redirects1.jayavardhanreddy616.xyz",
+    "lb-to-db1.jayavardhanreddy616.xyz",
+    "asg-lc2.jayavardhanreddy616.xyz",
   ]
 }

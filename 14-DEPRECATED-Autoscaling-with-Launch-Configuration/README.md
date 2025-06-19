@@ -263,7 +263,7 @@ module "alb" {
 ## Step-06: c12-route53-dnsregistration.tf
 - Update the DNS name relevant to demo
 ```t
-  name    = "asg-lc1.devopsincloud.com"
+  name    = "asg-lc1.jayavardhanreddy616.xyz"
 ```
 
 ## Step-07: Autoscaling with Launch Configuration Terraform Module
@@ -634,9 +634,9 @@ terraform apply -auto-approve
 8. Access and Test
 ```t
 # Access and Test
-http://asg-lc.devopsincloud.com
-http://asg-lc.devopsincloud.com/app1/index.html
-http://asg-lc.devopsincloud.com/app1/metadata.html
+http://asg-lc.jayavardhanreddy616.xyz
+http://asg-lc.jayavardhanreddy616.xyz/app1/index.html
+http://asg-lc.jayavardhanreddy616.xyz/app1/metadata.html
 ```
 
 
@@ -695,7 +695,7 @@ terraform apply -auto-approve
 - [Download Postman client and Install](https://www.postman.com/downloads/)
 - Create New Collection: terraform-on-aws
 - Create new Request: asg
-- URL: https://asg-lc1.devopsincloud.com/app1/metadata.html
+- URL: https://asg-lc1.jayavardhanreddy616.xyz/app1/metadata.html
 - Click on **RUN**, with 5000 requests
 - Monitor ASG -> Activity Tab
 - Monitor EC2 -> Instances - To see if new EC2 Instances getting created (Autoscaling working as expected)

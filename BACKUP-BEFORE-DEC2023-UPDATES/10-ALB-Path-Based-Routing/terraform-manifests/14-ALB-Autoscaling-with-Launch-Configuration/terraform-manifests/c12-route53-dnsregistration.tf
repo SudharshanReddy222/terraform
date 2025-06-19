@@ -1,7 +1,7 @@
-## DNS Registration - apps.devopsincloud.com
+## DNS Registration - apps.jayavardhanreddy616.xyz
 resource "aws_route53_record" "apps_dns" {
   zone_id = data.aws_route53_zone.mydomain.id
-  name    = "asg-lc2.devopsincloud.com"
+  name    = "asg-lc2.jayavardhanreddy616.xyz"
   type    = "A"
 
   alias {

@@ -15,9 +15,9 @@
 - We are going to implement Context Path based Routing in AWS Application Load Balancer using Terraform.
 - To achieve that we are going to implement many series of steps. 
 - We are going to implement the following using AWS ALB 
-1. Fixed Response for /* : http://apps.devopsincloud.com   
-2. App1 /app1* goes to App1 EC2 Instances: http://apps.devopsincloud.com/app1/index.html
-3. App2 /app2* goes to App2 EC2 Instances: http://apps.devopsincloud.com/app2/index.html
+1. Fixed Response for /* : http://apps.jayavardhanreddy616.xyz   
+2. App1 /app1* goes to App1 EC2 Instances: http://apps.jayavardhanreddy616.xyz/app1/index.html
+3. App2 /app2* goes to App2 EC2 Instances: http://apps.jayavardhanreddy616.xyz/app2/index.html
 4. HTTP to HTTPS Redirect
 
 ## Step-02: Copy all files from previous section 
@@ -42,7 +42,7 @@
 ```t
 # Get DNS information from AWS Route53
 data "aws_route53_zone" "mydomain" {
-  name = "devopsincloud.com"
+  name = "jayavardhanreddy616.xyz"
 }
 
 # Output MyDomain Zone ID
@@ -148,10 +148,10 @@ output "ec2_private_ip_app2" {
 terraform console
 
 # Provide Trim Suffix Function
-trimsuffix("devopsincloud.com.", ".")
+trimsuffix("jayavardhanreddy616.xyz.", ".")
 
 # Verify Output
-"devopsincloud.com"
+"jayavardhanreddy616.xyz"
 ```
 - **ACM Module Terraform Configuration**
 ```t
@@ -165,7 +165,7 @@ module "acm" {
   zone_id      = data.aws_route53_zone.mydomain.zone_id 
 
   subject_alternative_names = [
-    "*.devopsincloud.com"
+    "*.jayavardhanreddy616.xyz"
   ]
   tags = local.common_tags
 
@@ -347,7 +347,7 @@ resource "aws_lb_target_group_attachment" "mytg2" {
 # DNS Registration 
 resource "aws_route53_record" "apps_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id 
-  name    = "apps.devopsincloud.com"
+  name    = "apps.jayavardhanreddy616.xyz"
   type    = "A"
   alias {
     #name                   = module.alb.this_lb_dns_name
@@ -389,11 +389,11 @@ Observation:
 
 # Test (Domain will be different for you based on your registered domain)
 # Note: All the below URLS shoud redirect from HTTP to HTTPS
-1. Fixed Response: http://apps.devopsincloud.com   
-2. App1 Landing Page: http://apps.devopsincloud.com/app1/index.html
-3. App1 Metadata Page: http://apps.devopsincloud.com/app1/metadata.html
-4. App2 Landing Page: http://apps.devopsincloud.com/app2/index.html
-5. App2 Metadata Page: http://apps.devopsincloud.com/app2/metadata.html
+1. Fixed Response: http://apps.jayavardhanreddy616.xyz   
+2. App1 Landing Page: http://apps.jayavardhanreddy616.xyz/app1/index.html
+3. App1 Metadata Page: http://apps.jayavardhanreddy616.xyz/app1/metadata.html
+4. App2 Landing Page: http://apps.jayavardhanreddy616.xyz/app2/index.html
+5. App2 Metadata Page: http://apps.jayavardhanreddy616.xyz/app2/metadata.html
 ```
 
 ## Step-12: Clean-Up

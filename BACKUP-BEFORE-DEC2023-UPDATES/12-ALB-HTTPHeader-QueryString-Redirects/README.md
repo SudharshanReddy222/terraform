@@ -15,7 +15,7 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
 - **Rule-1:** custom-header=my-app-1 should go to App1 EC2 Instances
 - **Rule-2:** custom-header=my-app-2 should go to App2 EC2 Instances   
 - **Rule-3:** When Query-String, website=aws-eks redirect to https://stacksimplify.com/aws-eks/ 
-- **Rule-4:** When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.
+- **Rule-4:** When Host Header = azure-aks.jayavardhanreddy616.xyz, redirect to https://stacksimplify.
 
 - Understand about Priority feature for Rules `priority = 2`
 
@@ -95,9 +95,9 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
     },
 ```
 ### Step-02-04: Rule-4: Host Header Redirect
-- Rule-4: When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+- Rule-4: When Host Header = azure-aks.jayavardhanreddy616.xyz, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
 ```t
-  # Rule-4: When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+  # Rule-4: When Host Header = azure-aks.jayavardhanreddy616.xyz, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
     { 
       https_listener_index = 0
       priority = 4
@@ -110,7 +110,7 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
         protocol    = "HTTPS"
       }]
       conditions = [{
-        host_headers = ["azure-aks11.devopsincloud.com"]
+        host_headers = ["azure-aks11.jayavardhanreddy616.xyz"]
       }]
     },   
 ```
@@ -121,7 +121,7 @@ description: Create AWS Application Load Balancer Custom HTTP Header, 302 Redire
 ## Default DNS
 resource "aws_route53_record" "default_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id 
-  name    = "myapps11.devopsincloud.com"
+  name    = "myapps11.jayavardhanreddy616.xyz"
   type    = "A"
   alias {
     name                   = module.alb.this_lb_dns_name
@@ -133,7 +133,7 @@ resource "aws_route53_record" "default_dns" {
 ## Testing Host Header - Redirect to External Site from ALB HTTPS Listener Rules
 resource "aws_route53_record" "app1_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id 
-  name    = "azure-aks11.devopsincloud.com"
+  name    = "azure-aks11.jayavardhanreddy616.xyz"
   type    = "A"
   alias {
     name                   = module.alb.this_lb_dns_name
@@ -257,7 +257,7 @@ terraform apply -auto-approve
 - https://reqbin.com/
 ```t
 # Verify Rule-1 and Rule-2
-https://myapps.devopsincloud.com
+https://myapps.jayavardhanreddy616.xyz
 custom-header = my-app-1  - Should get the page from App1 
 custom-header = my-app-2  - Should get the page from App2
 ```
@@ -266,16 +266,16 @@ custom-header = my-app-2  - Should get the page from App2
 - When Query-String, website=aws-eks redirect to https://stacksimplify.com/aws-eks/
 ```t
 # Verify Rule-3
-https://myapps.devopsincloud.com/?website=aws-eks 
+https://myapps.jayavardhanreddy616.xyz/?website=aws-eks 
 Observation: 
 1. Should Redirect to https://stacksimplify.com/aws-eks/
 ```
 
 ## Step-08: Verify Rule-4
--  When Host Header = azure-aks.devopsincloud.com, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
+-  When Host Header = azure-aks.jayavardhanreddy616.xyz, redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
 ```t
 # Verify Rule-4
-http://azure-aks.devopsincloud.com
+http://azure-aks.jayavardhanreddy616.xyz
 Observation: 
 1. Should redirect to https://stacksimplify.com/azure-aks/azure-kubernetes-service-introduction/
 ```

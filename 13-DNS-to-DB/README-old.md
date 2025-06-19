@@ -507,7 +507,7 @@ sudo yum install -y telnet
 ## Step-07: c12-route53-dnsregistration.tf
 - Update the DNS name as desired to match our demo
 ```t
-  name    = "dns-to-db1.devopsincloud.com"
+  name    = "dns-to-db1.jayavardhanreddy616.xyz"
 ```
 ## Step-08: Execute Terraform Commands
 ```t
@@ -546,13 +546,13 @@ mysql> select * from user;
 ## Step-11: Access Applications and Test
 ```t
 # App1
-https://dns-to-db.devopsincloud.com/app1/index.html
+https://dns-to-db.jayavardhanreddy616.xyz/app1/index.html
 
 # App2
-https://dns-to-db.devopsincloud.com/app2/index.html
+https://dns-to-db.jayavardhanreddy616.xyz/app2/index.html
 
 # App3
-https://dns-to-db.devopsincloud.com
+https://dns-to-db.jayavardhanreddy616.xyz
 Username: admin101
 Password: password101
 1. Create a user, List User

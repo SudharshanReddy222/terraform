@@ -2,7 +2,7 @@
 ## Default DNS
 resource "aws_route53_record" "default_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id 
-  name    = "myapps11.devopsincloud.com"
+  name    = "myapps11.jayavardhanreddy616.xyz"
   type    = "A"
   alias {
     name                   = module.alb.dns_name
@@ -14,7 +14,7 @@ resource "aws_route53_record" "default_dns" {
 ## App1 DNS
 resource "aws_route53_record" "app1_dns" {
   zone_id = data.aws_route53_zone.mydomain.zone_id 
-  name    = "azure-aks11.devopsincloud.com"
+  name    = "azure-aks11.jayavardhanreddy616.xyz"
   type    = "A"
   alias {
     name                   = module.alb.dns_name

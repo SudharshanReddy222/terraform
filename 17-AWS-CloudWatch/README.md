@@ -25,7 +25,7 @@ description: Create CloudWatch Alarms for ASG, ALB, Synthetics, CIS Alarams
 ## Step-03: c12-route53-dnsregistration.tf
 - Change the DNS name as per your demo content 
 ```t
-  name    = "cloudwatch1.devopsincloud.com"
+  name    = "cloudwatch1.jayavardhanreddy616.xyz"
 ```
 
 ## Step-04: c14-01-cloudwatch-variables.tf
@@ -298,9 +298,9 @@ terraform apply -auto-approve
 7. Access and Test
 ```t
 # Access and Test
-http://cloudwatch.devopsincloud.com
-http://cloudwatch.devopsincloud.com/app1/index.html
-http://cloudwatch.devopsincloud.com/app1/metadata.html
+http://cloudwatch.jayavardhanreddy616.xyz
+http://cloudwatch.jayavardhanreddy616.xyz/app1/index.html
+http://cloudwatch.jayavardhanreddy616.xyz/app1/metadata.html
 ```
 
 ## Step-11: Clean-Up

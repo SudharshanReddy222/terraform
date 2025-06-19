@@ -90,7 +90,7 @@ data "terraform_remote_state" "vpc" {
 ## Step-10: Project-2: c12-route53-dnsregistration.tf
 ```t
 # Add DNS name relevant to demo
-  name    = "tf-multi-app-projects.devopsincloud.com"
+  name    = "tf-multi-app-projects.jayavardhanreddy616.xyz"
 ```
 ## Step-11: Project-2: Create S3 Bucket and DynamoDB Table for Remote State Storage
 - Create S3 Bucket and DynamoDB Table for Remote State Storage
@@ -177,9 +177,9 @@ terraform state list
 6. Access Application and Test
 ```t
 # Access Application
-https://tf-multi-app-projects1.devopsincloud.com
-https://tf-multi-app-projects1.devopsincloud.com/app1/index.html
-https://tf-multi-app-projects1.devopsincloud.com/app1/metadata.html
+https://tf-multi-app-projects1.jayavardhanreddy616.xyz
+https://tf-multi-app-projects1.jayavardhanreddy616.xyz/app1/index.html
+https://tf-multi-app-projects1.jayavardhanreddy616.xyz/app1/metadata.html
 ```
 
 ## Step-17: Project-2 Clean-Up

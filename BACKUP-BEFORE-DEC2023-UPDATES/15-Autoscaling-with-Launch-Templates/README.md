@@ -29,7 +29,7 @@ description: Create AWS Autoscaling with Launch Templates using Terraform
 ## Step-03: c12-route53-dnsregistration.tf
 - Update DNS name relevant to demo
 ```t
-  name    = "asg-lt1.devopsincloud.com"
+  name    = "asg-lt1.jayavardhanreddy616.xyz"
 ```
 
 ## Step-04: c13-01-autoscaling-with-launchtemplate-variables.tf
@@ -273,9 +273,9 @@ terraform apply -auto-approve
 7. Access and Test
 ```t
 # Access and Test
-http://asg-lt.devopsincloud.com
-http://asg-lt.devopsincloud.com/app1/index.html
-http://asg-lt.devopsincloud.com/app1/metadata.html
+http://asg-lt.jayavardhanreddy616.xyz
+http://asg-lt.jayavardhanreddy616.xyz/app1/index.html
+http://asg-lt.jayavardhanreddy616.xyz/app1/metadata.html
 ```
 
 ## Step-13: Update Launch Template and Verify
